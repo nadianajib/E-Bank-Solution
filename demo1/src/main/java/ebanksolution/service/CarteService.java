@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface CarteService {
     List<Carte> getAllCartes();
     Optional<Carte> getCarteById(int id);
-    Carte createCarte(Carte carte, int idCompte);
+    Carte createCarte(Carte idcarte, int idCompte);
     Carte updateCarte(int id, Carte carteDetails);
     void deleteCarte(int id);
     Carte activerCarte(int id);  // Nouvelle méthode
