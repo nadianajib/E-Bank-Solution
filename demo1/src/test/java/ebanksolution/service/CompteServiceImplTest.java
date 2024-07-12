@@ -2,10 +2,9 @@ package ebanksolution.service;
 
 
 import ebanksolution.dao.CompteDao;
-import ebanksolution.dao.UserDao;
+import ebanksolution.dao.UserRepository;
 import ebanksolution.model.Compte;
 import ebanksolution.model.Utilisateur;
-import ebanksolution.service.CompteServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -27,7 +26,7 @@ class CompteServiceImplTest {
     private CompteDao compteDao;
 
     @Mock
-    private UserDao utilisateurDao;
+    private UserRepository utilisateurDao;
 
     @BeforeEach
     void setUp() {

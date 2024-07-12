@@ -1,7 +1,7 @@
 package ebanksolution.service;
 
 import ebanksolution.dao.CompteDao;
-import ebanksolution.dao.UserDao;
+import ebanksolution.dao.UserRepository;
 import ebanksolution.model.Compte;
 import ebanksolution.model.Utilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class CompteServiceImpl implements CompteService {
     private CompteDao compteDao;
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userDao;
 
     @Override
     public List<Compte> getComptes() {
