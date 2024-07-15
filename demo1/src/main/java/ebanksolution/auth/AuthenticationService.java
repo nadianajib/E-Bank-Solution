@@ -43,6 +43,9 @@ public class AuthenticationService {
         );
         var user=repository.findByEmail(request.getEmail())
                 .orElseThrow();
-        return null;
+        var jwtToken= jwtService.generateToken(user);
+        return AuthenticationResponse.builder()
+                .token(jwtToken)
+                .build();
     }
 }

@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CarteDao extends JpaRepository<Carte, Integer> {
-
-    Carte findActiveCarte(int id, boolean active);
 }
